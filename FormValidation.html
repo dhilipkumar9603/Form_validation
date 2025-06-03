@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            practicing html from scratch
+        </title>
+        <link rel="stylesheet" href="Form.css">
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to My Practice Page</h1>
+            <p>This is a simple HTML page created for practice.</p>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Info</a>
+                <a href="#">Report</a>
+                <a href="#">Menu</a>
+            </nav>
+        </header><hr>
+        <section>
+            <article>
+                <form action="https://example.com/submit" method="post" id="myForm">
+                    <fieldset>
+                        <legend>Details</legend>
+                        <table>
+                            
+                            <tr><td><label for="name">Name:</label></td>
+                            <td><input type="text" id="name" name="name" autofocus> </td></tr>
+                            <tr><td><label for="email">Email:</label></td>
+                            <td><input type="email" id="email" name="email"> </td></tr>
+                            
+                        </table>
+                            <fieldset>
+                                <legend>Personal details</legend>
+                                <label for="message">Message:</label>
+                                <input type="textarea" id="message" name="message" rows="4" cols="50" placeholder="Enter your message here..."></input>
+                                <input id="submit" type="submit" value="Submit">
+                        </fieldset>
+                    </fieldset>
+                </form>
+            </article>
+            <aside>
+                <h2>Additional Information</h2>
+                <p>This section can contain additional information or links related to the main content.</p>
+                <ul>
+                    <li><a href="https://www.example.com">Example Link 1</a></li>
+                    <li><a href="https://www.example.com">Example Link 2</a></li>
+                    <li><a href="https://www.example.com">Example Link 3</a></li>
+                </ul>
+            </aside>
+        </section>
+        <hr>
+        <footer>
+            <p>&copy; 2023 My Practice Page. All rights reserved.</p>
+            <p>Contact: <a href="mailto:dhilipkumarkolasanakota@gmail.com">Dhilip</a>
+        </footer>
+        <script>
+            document.getElementById('submit').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const nameRegex = /^[A-Z][a-z]+$/;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            let valid = true;
+
+            // Validate name
+            if (name.value.trim() === "") {
+                name.style.borderColor = "red";
+                name.placeholder = "Please enter your name";
+                valid = false;
+            } else if (!nameRegex.test(name.value)) {
+                name.style.borderColor = "red";
+                name.value = "";
+                name.placeholder = "Start with capital letter";
+                valid = false;
+            } else {
+                name.style.borderColor = "green";
+            }
+
+            // Validate email
+            if (email.value.trim() === "" || !emailRegex.test(email.value)) {
+                email.style.borderColor = "red";
+                email.value = "";
+                email.placeholder = "Enter valid email";
+                valid = false;
+            } else {
+                email.style.borderColor = "green";
+            }
+
+            // Show success message if valid
+            if (valid) {
+                alert("Form submitted successfully!");
+                document.getElementById('myForm').reset();
+            }
+        });
+
+        </script>
+    </body>
+</html>

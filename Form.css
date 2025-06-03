@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px;
+    background-color: #f0f0f0;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+fieldset {
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+}
+fieldset legend {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: bisque;
+    display: flex;
+}
+article {
+    flex: 1;
+    margin-right: 20px;
+    width:85%;
+}
+aside {
+    width: 15%;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+    width: 100%;
+    
+    height:80px;
+    bottom: 0;
+    border-radius: 20px;
+}
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin: 5px 0;
+}
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+#submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#submit:hover {
+    background-color: #45a049;
+}
+nav{
+    text-align: right;
+    color:aqua;
+}
+nav a{
+    color: aquamarine;
+}
+input[type="textarea"]{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
